@@ -10,19 +10,20 @@
         <h2>Información del usuario</h2>
         <div>
             <label for="username">Escribe el nombre de usuario</label>
-            <input type="text" id="username" placeholder="nombre-apellido">
+            <input type="text" id="username" placeholder="nombre-apellido" required maxlength="16" minlength="2">
         </div>
         <div>
             <label for="password">Escribe la contraseña</label>
-            <input type="text" id="password" placeholder="contraseña">
+            <input type="password" id="password" placeholder="contraseña">
         </div>
         <!-- Agregar boton de enviar dos formas-->
-        <button type="submit">Enviar <img src="./assets/images/auto rojo.jpg" width="24px"></button> <!-- ideal para agregar imagen -->
+        <button type="submit">Enviar <img src="./assets/images/auto rojo.jpg" alt="" width="100px"></button> <!-- ideal para agregar imagen -->
         <input type="submit" value="Confirmar">
     </form>
     <!-- form va todo dentro de esta etiqueta 
     input cuando el usuario se comunica con nosotros id identifica el input
     Label: permite etiquetar el input va con el id del input correspondiente *siempre va el label por las reglas de accesibilidad de la w3c*
-    place holder texto gris de referencia del formato ej:Fecha dd/mm/aaaa-->
+    place holder texto gris de referencia del formato ej:Fecha dd/mm/aaaa--
+    required: hace que el usuario este obligado a completar para continuar>
 </body>
 </html>
