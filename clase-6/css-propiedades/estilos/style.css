@@ -1,0 +1,14 @@
+@import url(./font.css);
+h1{
+    color: #a52a2a;
+    font-size: 60px;
+    text-decoration: underline rgb(165, 42, 142) wavy;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: var(--ff-title);
+}
+h2{
+    font-family: var(--ff-text)
+}

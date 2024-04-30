@@ -1,0 +1,32 @@
+/* CSS = Hoja de estilo en cascada 
+En los elementos importa el orden en el que escribo
+Las clases son mucho mas especificas y no importa el orden. Pueden tener mas elementos.
+Los ID son mas especificos aun, es algo unico para un solo elemento.
+Selector universal: selecciona todos los elementos se usa mas que nada para los espacios se suele poner arriba del todo*/
+
+/* Selector universal */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Selector de elementos */
+button{
+    color: red;
+}
+
+/* Selector de clase */
+.especial{
+    color: blue;
+}
+
+.segunda-class{
+    background-color: aqua;
+}
+
+/* Selector de ID mala practica, no deberia necesitarlo*/
+#btn-super-especial{
+    color: chartreuse;
+}
+
+
+
