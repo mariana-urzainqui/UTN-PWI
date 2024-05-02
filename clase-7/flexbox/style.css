@@ -12,7 +12,7 @@
     flex-direction: row-reverse;
     flex-wrap: nowrap; /* Flex wrap: wrap:se ajustan las cosas al tamaño (tipo alt+z en vsc)  nowrap: no se ajustan las cosas */
     gap: 50px;
-    justify-content: space-between; /* center start end space-between(tomar el espacio total restante y dividirlo exacto) space evenly (hacia los costados y entre ellos por igual)*/
+    justify-content: space-between; /* center start end space-between(tomar el espacio total restante y dividirlo exacto) space evenly (hacia los costados y entre ellos por igual) space around(espacio/cantidad de hijos)seria que el espacio al borde seria la mitad que hay entre hijos*/
     align-items: end;
 }
 
