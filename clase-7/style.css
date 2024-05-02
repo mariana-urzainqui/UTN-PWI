@@ -1,0 +1,85 @@
+/* Margin: Espacio que va del borde del elemento hacia afuera 
+Border: grosor(en px) tipo(solid, dashed, double, dotted, inset o outset) color
+Puede ser border left, right, top o bottom
+Padding: Espacio que esta del borde hacia adentro. 
+Si son todos distintos 1er valor representa arriba, el 2do el lado derecho, el 3ero abajo, el 4to lado izquierdo. Idem Margin.
+Padding | Margin:
+propiedad: <para todos los ejes>;
+propiedad: <eje y o vertical> <eje x o horizontal>;
+propiedad: <top> <eje x o horizontal> <bottom>;
+propiedad: <top> <right> <bottom> <left>;
+Los px de border y padding agrandan el tamaño final entonces hay que agregar box sizing border-box para evitarlo (va al principio del archivo con el selector universal)
+*/
+
+/* Normalizacion se pone siempre al iniciar mi archivo css. Si hay mas de un archivo css, puedo hacer un archivo de normalize e importar en el resto*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin-top: 100px;
+    margin-left: 200px;
+    border: 5px solid red;
+    padding: 5px 15px 8px;
+    box-shadow: 20px 40px 3px 0px black;
+}
+
+/* Box shadow: 1ero cuantos pixeles lo muevo respecto al eje x
+2do cuantos pixeles lo muevo respecto al eje y
+3er px es el blur 
+4to px que tan grande va a ser la sombra respecto al alemento de adelante 
+inset: si quiero que la sombra sea interna
+*/
+
+/* Los elementos en linea no llevan margin ni padding, si quiero que lleven le pongo display: inline-block*/
+span{
+    background-color: blue;
+}
+
+header{
+    background-color: #FFE600;
+    padding: 32px;
+}
+
+header input{
+    width: 344px;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    border: 1px solid transparent
+}
+
+header .buscador::placeholder{
+    color: #999999;
+}
+
+header input:focus-visible{
+    outline: none;
+    border: 1.5px solid #3483fa;
+}
+
+a{
+    color:black;
+    background-color: #999999;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700px;
+}
+
+/* Una transicion es un cambio de valores en un X tiempo */
+a:hover{
+    background-color: aquamarine;
+    font-size: 20px;
+    transition: 1000ms ease-in-out;
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    background-color: green;
+    width: 100vw; /* Viewport widht */
+    height: 100vh; /* Viewport height */
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap; /* Flex wrap: wrap:se ajustan las cosas al tamaño (tipo alt+z en vsc)  nowrap: no se ajustan las cosas */
+    gap: 50px;
+    justify-content: space-between; /* center start end space-between(tomar el espacio total restante y dividirlo exacto) space evenly (hacia los costados y entre ellos por igual)*/
+    align-items: end;
+}
+
+.padre .hijo{
+    background-color: red;
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+/* Trae al hijo (numero que elija) de los tres div teniendo en cuenta la flex direction */
+.padre .hijo:nth-child(1){ 
+    background-color: blue;
+} 
