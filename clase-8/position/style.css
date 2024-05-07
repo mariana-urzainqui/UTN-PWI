@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.padre{
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.padre .hijo{
+    width: 200px;
+    height: 200px;
+    border: 1px solid  black;
+    background-color: aqua;
+    z-index: 2;
+}
+
+/* Position
+static no permite usar bottom | relative (por defecto) toma el espacio relativo a mi posición original| absolute | sticky | fixed
+bottom: genera espacio abajo
+top: genera espacio arriba
+right: genera espacio a la derecha
+left: genera espacio a la izquierda
+ */
+.padre .hijo:nth-child(2){
+    position: relative;
+    /* bottom: 20px; css siempre toma prioridad al top y left */
+    top: 20px;
+    right: 300px;
+    background-color: red;
+    z-index: 1; /* 1: Hace que este una capa por detras va de . El fondo del todo es -1 en positivo va mas adelante cuanto mayor sea*/
+}
+
+/* Position: absolute
+No existe el espacio relativo (la posicion original)
+Se usa para mandar un elemento a un lugar muy especifico y que siempre este ahi por encima de otras cosas
+Padre tiene que ser relativo para mover mas facil el absolute
+*/
+
