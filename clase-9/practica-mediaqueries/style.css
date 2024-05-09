@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --ff-text:"DM Sans", sans-serif;
+    --bg-color-terciary: #f4f5ff;
+    --text-color: #2f1c6a;
+    --bg-color: #fafbff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-text);
+}
+
+.text{
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 24px;
+}
+
+.card{
+    border-radius: 5px;
+    padding: 32px;
+    max-width: 508px;
+}
+
+.section{
+    padding: 32px 16px;
+    background-color: var(--bg-color);
+    display: flex;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.review-card{
+    background-color: var(--bg-color-terciary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-card img{
+    width: 200px;
+}
+
+@media screen and (min-width:750px){
+    .card{
+        max-width: 688px;
+    }
+}
+
+@media screen and (min-width:1050px){
+    .reviews{
+        flex-direction: row;
+        align-items: start;
+        max-height: 208px;
+    }
+    .reviews .review-card{
+        flex: 1; /* que el hijo tome una fracción del espacio */
+        height:300px;
+    }
+}
+
+
+
