@@ -1,0 +1,102 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --ff-text: "DM Sans", sans-serif;
+    --text-color: #2f1c6a;
+    --primary-color: #673de6;
+    --bg-color-terciary: #f4f5ff;
+    --bg-color-primary: #ffffff;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-text);
+}
+
+.cards{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 20;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    border: 1px solid #673de646;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.card .card-info{
+    height: 300px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 40px 30px;
+    position: relative;
+    gap: 20px;
+}
+
+.card .card-info .stars{
+    color: var(--primary-color);
+    padding-left: 2px;
+}
+
+.card .card-info .review-text{
+    font-family: var(--ff-text);
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.card .card-info .history-text{
+    position: absolute;
+    bottom: 40px;
+}
+
+.card .card-info .history-text a{
+    font-family: var(--ff-text);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.user-info{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-top: 1 px solid #673de646;
+    background-color: var(--bg-color-terciary);
+    gap: 10px;
+}
+
+.user-info .user-pic{
+    width: 65px;
+}
+
+.user-info .user-name{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 55px;
+}
+
+.user-info .user-name h3{
+    font-family: var(--ff-text);
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.user-info .user-name span{
+    font-family: var(--ff-text);
+    font-weight: 250;
+    font-size: 14px;
+    color: var(--text-color);
+}
