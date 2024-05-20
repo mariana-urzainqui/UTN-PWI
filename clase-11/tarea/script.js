@@ -60,7 +60,7 @@ Isósceles: dos lados son iguales.
 Escaleno: todos los lados son diferentes.
 Si alguna de las longitudes introducidas es menor o igual a 0, el programa debe mostrar "Longitudes no válidas." */
 
-let longitud_1 = prompt('Ingresa primer longitud del triángulo')
+/* let longitud_1 = prompt('Ingresa primer longitud del triángulo')
 let longitud_2 = prompt('Ingresa segunda longitud del triángulo')
 let longitud_3 = prompt('Ingresa tercer longitud del triángulo')
 if(longitud_1<=0 || longitud_2<=0 ||longitud_3<=0){
@@ -74,4 +74,65 @@ else if(longitud_1 === longitud_2 || longitud_1 === longitud_3 || longitud_2 ===
 }
 else{
     console.log('Escaleno')
+}
+ */
+
+/* 4)
+Escribe un programa que le pida al usuario que introduzca un número del 1 al 7 mediante un prompt. El programa debe mostrar en la consola el día de la semana correspondiente al número introducido:
+1: Lunes
+2: Martes
+3: Miércoles
+4: Jueves
+5: Viernes
+6: Sábado
+7: Domingo
+Si el número introducido no está en el rango de 1 a 7, el programa debe mostrar "Número no válido." */
+
+/* let numero_semana = prompt('Ingresa el número correspondiente al día de semana seleccionado')
+
+if(numero_semana >7 || numero_semana <1){
+    console.log('Número no válido.')
+}
+else if(numero_semana === '1'){
+    console.log('Lunes')
+}
+else if(numero_semana === '2'){
+    console.log('Martes')
+}
+else if(numero_semana === '3'){
+    console.log('Miércoles')
+}
+else if(numero_semana === '4'){
+    console.log('Jueves')
+}
+else if(numero_semana === '5'){
+    console.log('Viernes')
+}
+else if(numero_semana === '6'){
+    console.log('Sábado')
+}
+else{
+    console.log('Domingo')
+} */
+
+/* 5)
+Crea un programa que le pida al usuario que introduzca una temperatura en grados Celsius mediante un prompt. El programa debe determinar y mostrar en la consola el estado del agua a esa temperatura:
+Sólido: 0 grados Celsius o menos.
+Líquido: entre 0 y 99 grados Celsius.
+Gaseoso: 100 grados Celsius o más.
+Si la temperatura introducida no es un número válido, el programa debe mostrar "Temperatura no válida." */
+
+let temperatura = Number(prompt('Introduzca una temperatura en grados Celsius para ver el estado del agua en esa temperatura'))
+
+if(temperatura == NaN){    
+    console.log('Temperatura no válida.')
+}
+if(temperatura <=0){
+    console.log('Sólido')
+}
+else if(temperatura >0 || temperatura <=99){
+    console.log('Líquido')
+}
+else{
+    console.log('Gaseoso')
 }
