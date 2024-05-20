@@ -5,7 +5,7 @@ Si la edad es entre 13 y 17 inclusive, mostrar "Eres un adolescente."
 Si la edad es entre 18 y 64 inclusive, mostrar "Eres un adulto."
 Si la edad es 65 o mayor, mostrar "Eres una persona mayor." */
 
-/* let edad = prompt('Ingresa tu edad')
+/* let edad = Number(prompt('Ingresa tu edad'))
 
 if(edad <=0){
     console.log('Edad no válida')
@@ -32,7 +32,7 @@ Crea un programa que le pida al usuario que introduzca una calificación numéri
 0 a 59: F
 Si la calificación introducida está fuera del rango de 0 a 100, el programa debe mostrar "Calificación no válida." */
 
-/* let calificacion = prompt('Ingresa una calificación numérica')
+/* let calificacion = Number(prompt('Ingresa una calificación numérica'))
 
 if(calificacion >=90 && calificacion <=100){
     console.log('A')
@@ -74,8 +74,8 @@ else if(longitud_1 === longitud_2 || longitud_1 === longitud_3 || longitud_2 ===
 }
 else{
     console.log('Escaleno')
-}
- */
+} */
+
 
 /* 4)
 Escribe un programa que le pida al usuario que introduzca un número del 1 al 7 mediante un prompt. El programa debe mostrar en la consola el día de la semana correspondiente al número introducido:
@@ -88,27 +88,27 @@ Escribe un programa que le pida al usuario que introduzca un número del 1 al 7 
 7: Domingo
 Si el número introducido no está en el rango de 1 a 7, el programa debe mostrar "Número no válido." */
 
-/* let numero_semana = prompt('Ingresa el número correspondiente al día de semana seleccionado')
+/* let numero_semana = Number(prompt('Ingresa el número correspondiente al día de semana seleccionado'))
 
 if(numero_semana >7 || numero_semana <1){
     console.log('Número no válido.')
 }
-else if(numero_semana === '1'){
+else if(numero_semana === 1){
     console.log('Lunes')
 }
-else if(numero_semana === '2'){
+else if(numero_semana === 2){
     console.log('Martes')
 }
-else if(numero_semana === '3'){
+else if(numero_semana === 3){
     console.log('Miércoles')
 }
-else if(numero_semana === '4'){
+else if(numero_semana === 4){
     console.log('Jueves')
 }
-else if(numero_semana === '5'){
+else if(numero_semana === 5){
     console.log('Viernes')
 }
-else if(numero_semana === '6'){
+else if(numero_semana === 6){
     console.log('Sábado')
 }
 else{
@@ -124,13 +124,13 @@ Si la temperatura introducida no es un número válido, el programa debe mostrar
 
 let temperatura = Number(prompt('Introduzca una temperatura en grados Celsius para ver el estado del agua en esa temperatura'))
 
-if(temperatura == NaN){    
+if (isNaN(temperatura)){
     console.log('Temperatura no válida.')
 }
-if(temperatura <=0){
+else if(temperatura <=0){
     console.log('Sólido')
 }
-else if(temperatura >0 || temperatura <=99){
+else if(temperatura >0 && temperatura <100){
     console.log('Líquido')
 }
 else{
