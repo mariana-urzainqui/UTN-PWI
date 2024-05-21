@@ -16,10 +16,10 @@ else if(edad<13){
 else if(edad >=13 && edad <=17){
     console.log('Eres un adolescente')
 }
-else if(edad>=18 && edad <=64)[
+else if(edad>=18 && edad <=64){
     console.log('Eres un adulto')
-]
-else{
+}
+else if(edad>=65){
     console.log('Eres una persona mayor')
 } */
 
@@ -31,8 +31,8 @@ Crea un programa que le pida al usuario que introduzca una calificación numéri
 60 a 69: D
 0 a 59: F
 Si la calificación introducida está fuera del rango de 0 a 100, el programa debe mostrar "Calificación no válida." */
-
-/* let calificacion = Number(prompt('Ingresa una calificación numérica'))
+/* 
+let calificacion = Number(prompt('Ingresa una calificación numérica'))
 
 if(calificacion >=90 && calificacion <=100){
     console.log('A')
@@ -74,8 +74,8 @@ else if(longitud_1 === longitud_2 || longitud_1 === longitud_3 || longitud_2 ===
 }
 else{
     console.log('Escaleno')
-} */
-
+}
+ */
 
 /* 4)
 Escribe un programa que le pida al usuario que introduzca un número del 1 al 7 mediante un prompt. El programa debe mostrar en la consola el día de la semana correspondiente al número introducido:
@@ -122,17 +122,19 @@ Líquido: entre 0 y 99 grados Celsius.
 Gaseoso: 100 grados Celsius o más.
 Si la temperatura introducida no es un número válido, el programa debe mostrar "Temperatura no válida." */
 
-let temperatura = Number(prompt('Introduzca una temperatura en grados Celsius para ver el estado del agua en esa temperatura'))
-
-if (isNaN(temperatura)){
+let temperatura = prompt('Introduzca una temperatura en grados Celsius para ver el estado del agua en esa temperatura')
+if (temperatura === ' ' || temperatura === null || isNaN(temperatura)){ /* o (!temperatura || isNaN(temperatura))*/
     console.log('Temperatura no válida.')
 }
-else if(temperatura <=0){
-    console.log('Sólido')
-}
-else if(temperatura >0 && temperatura <100){
-    console.log('Líquido')
-}
 else{
-    console.log('Gaseoso')
+    if(temperatura <=0){
+        console.log('Sólido')
+    }   
+    else if(temperatura >0 && temperatura <=99){
+        console.log('Líquido')
+    }
+    else if(temperatura >= 100){
+        console.log('Gaseoso')
+    }
 }
+
