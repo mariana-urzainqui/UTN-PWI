@@ -42,12 +42,12 @@ Principio DRY = Don't repeat yourself
 
 /* Vamos a solicitar un numero 3 veces al finalizar mostrar el resultado e la sumatoria de los 3 numeros */
 
-let listadenumeros=0
+/* let listadenumeros=0
 for(let i=1;i<=3;i++){
     let numero=Number(prompt('ingrese un numero'))
     listadenumeros= listadenumeros + numero
 }
-alert(listadenumeros)
+alert(listadenumeros) */
 /* 
 camelCase = ingles
 snake_case = español */
@@ -95,4 +95,53 @@ saludar('pepe') */
     console.log(importe*0.21)
 } */
 
+
+/* let string = prompt('Ingrese un string')
+
+while(!string || isNaN(string)){
+    alert('Error! No es un string')
+    string = prompt('Ingrese un string válido')
+} */
+
+/* 
+for(let iterador = 1; iterador <=3; iterador = iterador + 1){
+    let nombre = prompt('Ingrese un nombre')
+    alert('nombre')
+} */
+
+/* let resultado = 0
+for(let iterador = 1; iterador <=3; iterador = iterador +1){
+    let numero = Number(prompt('Ingrese un número'))
+    resultado = resultado + numero
+}
+alert(resultado) */
+
+/* let cantidadDeRepeticiones = prompt('Ingrese cantidad de repeticiones')
+let resultado = 0
+while(!cantidadDeRepeticiones || isNaN(cantidadDeRepeticiones)){
+    alert('Error:Ingrese un número')
+    cantidadDeRepeticiones = prompt('Por favor ingrese un número')
+}
+for(let iterador = 1; iterador <= cantidadDeRepeticiones; iterador = iterador + 1){
+    let numero = prompt('Ingrese un número')
+    while(!numero || isNaN(numero)){
+        alert('Error: ingrese un número')
+        numero = prompt('Ingrese un numero valido')
+    }
+    resultado = resultado + Number(numero)
+}
+alert(resultado) */
+
+
+/* function sumar (numero1, numero2){
+    console.log(numero1 + numero2)
+} */
+
+/* function calcularIva (precio){
+    console.log(precio*0.21)
+} Esto no ata a la consola nomas, para hacerla mas agnostica se usa el return
+
+function calcularIva (precio){
+    return precio*0.21
+*/
 
