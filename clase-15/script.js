@@ -49,5 +49,5 @@ const operacion = (numero1,numero2,operador) =>{
     else if (operador === '-'){
         return numero1 - numero2
     }
-}
+}   
 
