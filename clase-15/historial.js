@@ -87,7 +87,7 @@ guardarEnHistorial({
 const renderizarHistorial = () =>{
     const historial = obtenerHistorial()
     let listaHistorial = ''
-    for (let obj of historial){
+    for (const obj of historial){
         listaHistorial = listaHistorial + `
         Accion: ${obj.accion}
         Operacion: ${obj.operacion}
@@ -97,5 +97,5 @@ const renderizarHistorial = () =>{
     }
     return listaHistorial
 }
-alert(renderizarHistorial)
+alert(renderizarHistorial())
 
