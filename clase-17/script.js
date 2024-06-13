@@ -77,8 +77,21 @@ const eliminarItemPorID = (id) =>{
     else{
         console.error('Error: item con id inexistente')
     }
+
+    console.log(productoBuscado)
 }
 
+const agregarItemAlCarrito = (nuevoProducto) => {
+    const productoBuscado = carrito.find((producto => producto.id === id))
+    if(productoBuscado){
+        productoBuscado.cantidad = productoBuscado.cantidad + 1 
+    } 
+    else {
+        nuevoProducto.cantidad = 1         
+        carrito.push(nuevoItem)   
+    }
+    renderizarCarrito(carrito)
+}
 
 
 
