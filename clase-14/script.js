@@ -83,9 +83,25 @@ for(let nombre of nombres3){
     console.log(nombre)
 }
 
+let sumatoriaCaracteres = 0
+for(let index = 0; index<nombres3.length; index = index + 1){
+    sumatoriaCaracteres = sumatoriaCaracteres + nombres3[index].length
+}
+
+console.log('La cantidad de caracteres es: ' + sumatoriaCaracteres)
 
 
+const array = ['pepe', 'lucas', 'PEDRO', 'Juan']
 
+const estaEnMinuscula = (string) => string == string.toLowerCase
 
+const tieneMayuscula = (string) => !estaEnMinuscula(string)
 
+const array2 = []
+for(let nombre of array){
+    if (tieneMayuscula(nombre)){
+        array2.push(nombre)
+    }
+}
+console.log(array2)
 
