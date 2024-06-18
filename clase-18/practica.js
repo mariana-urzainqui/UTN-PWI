@@ -1,25 +1,25 @@
-const comprarHTML = document.getElementById('comprar')
-const elegirHTML = document.getElementById('elegir-cantidad')
-const numeroHTML = document.getElementById('numero')
-const agregarHTML = document.getElementById('agregar')
-const restarHTML = document.getElementById('restar')
+const comprarBtnHTML = document.getElementById('comprar')
+const contadorContainerHTML = document.getElementById('elegir-cantidad')
+const contadorCantidadHTML = document.getElementById('numero')
+const agregarBtnHTML = document.getElementById('agregar')
+const restarBtnHTML = document.getElementById('restar')
 
-elegirHTML.style.display = 'none'
+contadorContainerHTML.style.display = 'none'
 
-const onClick = () =>{
-    comprarHTML.style.display = 'none'
-    elegirHTML.style.display = 'flex'
+const comprar = () =>{
+    comprarBtnHTML.style.display = 'none'
+    contadorContainerHTML.style.display = 'flex'
 }
 
-comprarHTML.addEventListener('click', onClick)
+comprarBtnHTML.addEventListener('click', comprar )
 
 const volver = ()=>{
-    comprarHTML.style.display = 'flex'
-    elegirHTML.style.display = 'none'
-    }
+    comprarBtnHTML.style.display = 'flex'
+    contadorContainerHTML.style.display = 'none'
+}
 
 const renderizarContador = () =>{
-    numeroHTML.innerText = numero
+    contadorCantidadHTML.innerText = numero
 }
 
 const agregar = () =>{
@@ -40,5 +40,5 @@ const restar = () =>{
 let numero = 1
 renderizarContador()
 
-agregarHTML.addEventListener ('click', agregar)
-restarHTML.addEventListener('click', restar)
+agregarBtnHTML.addEventListener ('click', agregar)
+restarBtnHTML.addEventListener('click', restar)
