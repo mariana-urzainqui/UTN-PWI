@@ -11,9 +11,6 @@ Una vez obtenido el JSON de esa direccion deberas renderizar todos los posts en 
 */
 
 const postContainerHTML = document.getElementById('posts-container')
-const formHTML = document.getElementById('post-form')
-const titleHTML = document.getElementById('title')
-const postHTML = document.getElementById('post')
 
 const solicitarPost = async () =>{
     const respuesta = await fetch('https://jsonplaceholder.typicode.com/posts',{
@@ -47,6 +44,10 @@ Cuando se envie el formulario se debera capturar titulo y body y se envia via fe
 Y van a mostrar por consola un 'Enviado'
 */
 
+const formHTML = document.getElementById('post-form')
+const titleHTML = document.getElementById('title')
+const postHTML = document.getElementById('post')  
+
 const postObject = (title,body) => {
     return {
         title: title,
@@ -54,16 +55,32 @@ const postObject = (title,body) => {
     }
 }
 
-const sendPost = (postObject) =>{
-    return fetch('https://jsonplaceholder.typicode.com/posts',{
-    method: 'POST',
-    body: JSON.stringify(postObject)
-})
+const sendPost = async (postObject) =>{
+    const post = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(postObject),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    const resultado = await post.json()
+    console.log('Enviado', resultado)
 }
 
 const handleSubmit = async (event) =>{
     event.preventDefault()
-    console.log('formulario enviado')
+    const title = titleHTML.value
+    const body = postHTML.value
+    const post = postObject(title, body)
+    await sendPost(post)
 }
 
 formHTML.addEventListener('submit', handleSubmit)
+
+sendPost({
+    title: 'Posteo prueba',
+    body: 'Este es el body del posteo de prueba'
+})
+
+
+
