@@ -77,10 +77,6 @@ const handleSubmit = async (event) =>{
 
 formHTML.addEventListener('submit', handleSubmit)
 
-sendPost({
-    title: 'Posteo prueba',
-    body: 'Este es el body del posteo de prueba'
-})
 
 
 
