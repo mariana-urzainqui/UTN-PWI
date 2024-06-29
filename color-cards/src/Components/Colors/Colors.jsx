@@ -7,7 +7,7 @@ const Colors = (props) => {
             {props.colors.map((color, index) => {
                 return (
                     <div className="color" key={index} style={{backgroundColor: color}}>
-                        <span>{color}</span>
+                        <span className='color-hex'>{color}</span>
                     </div>
                 )
             })

@@ -1,27 +1,28 @@
-.colors{
+.color-card .colors{
     width: 100%;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.colors .color{
+.color-card .colors .color{
     display: flex;
-    align-items: center;
+    align-items: end;
+    height: 100%;
 }
 
-.colors .color span{
+.colors .color .color-hex{
     color: #e6e6e6;
     background-color: rgba(0, 0, 0, 0.27);
-    padding: 5 px;
+    padding: 5px;
     width: 80px;
     text-align: center;
     font-size: 12px;
     border-top-right-radius: 5px;
-    display: none;
+    display: none
 }
 
-.colors .color:hover span{
+.colors .color:hover .color-hex{
     display: inline-block;
 }
 
