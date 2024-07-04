@@ -9,6 +9,7 @@ const CardContainer = (props) => {
             {props.colorCards.map((colorCard) => {
                 return (
                     <ColorCard
+                        key={colorCard.id}
                         colors={colorCard.colors}
                         likes={colorCard.likes}
                         update={colorCard.update}

@@ -1,5 +1,5 @@
-import React from 'react'
-import RowInfo from './Components/RowInfo'
+/* import React from 'react'
+import RowInfo from './Components/RowInfo' */
 
 /* import CodePointInfo from './Components/CodePointInfo' */
 /* import Button from './Components/Button'
@@ -27,7 +27,7 @@ export default App
  */
 
 
-function App() {
+/* function App() {
   return (
 <>
   <RowInfo title= "Icon Font">
@@ -59,5 +59,50 @@ function App() {
   )
 }
 
+export default App */
+
+/*
+Tarea
+const userData = {
+    isLogged: true,
+    isAdmin: true,
+    lang: 'en'
+  }
+  Van a crear un componente llamado Navbar y van a pasarle por props el objeto userData
+  Si isLogged es false entonces mostraran un button que diga 'login'
+  Si isAdmin es true mostraran un <button></button> que diga 'crear producto'
+  OPCIONAL:
+  Si lang esta en 'en' todos los textos deben ser en ingles
+  Si lang esta en 'es' todos los textos deben ser en español
+  */
+
+import React from 'react'
+import NavBar from './Components/NavBar'
+
+const userData = {
+  isLogged: true,
+  isAdmin: true,
+  lang: 'en'
+}
+
+const data = {
+  EN:{
+    inicio: 'Home',
+    login: 'Login',
+    producto: 'Create product'
+  },
+  ES:{
+    inicio: 'Inicio',
+    login: 'Iniciar Sesión',
+    producto: 'Crear producto'
+  }
+}
+
+const App = () => {
+  return (
+    <NavBar userData={userData} data ={data}/>
+  )
+}
 
 
+export default App
