@@ -1,5 +1,8 @@
 import React from 'react'
 import CardContainer from './Components/CardContainer/CardContainer'
+import Counter from './Components/Counter/Counter'
+import ColorCardForm from './Components/ColorCardForm/ColorCardForm'
+
 
 function App() {
   const colorCards = [
@@ -22,16 +25,22 @@ function App() {
       id: 3
     },
     {
-      colors:['#B0C5A4', '#D37676', '#EBC49F', '#F1EF99'],
+      colors: ['#B0C5A4', '#D37676', '#EBC49F', '#F1EF99'],
       likes: '3107',
       update: '3 months',
       id: 4
     },
   ]
+
   
+
+
+
   return (
     <>
-    <CardContainer colorCards={colorCards}/>
+      <CardContainer colorCards={colorCards} />
+      <Counter limit={3}/>
+      <ColorCardForm/>
     </>
   )
 }

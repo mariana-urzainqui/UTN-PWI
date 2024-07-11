@@ -15,8 +15,14 @@
 }
 
 .color-cards-container{
+    padding: 10px;
     display: flex;
     gap: 50px;
     width: 1150px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
+.contenedor-contador{
+    display: flex;
+    align-items: center;
 }
