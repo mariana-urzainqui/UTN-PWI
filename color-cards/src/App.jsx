@@ -26,7 +26,7 @@ function App() {
     },
     {
       colors: ['#B0C5A4', '#D37676', '#EBC49F', '#F1EF99'],
-      likes: '3107',
+      likes: 3107,
       update: '3 months',
       id: 4
     },
