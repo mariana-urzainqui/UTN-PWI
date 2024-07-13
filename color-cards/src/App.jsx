@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardContainer from './Components/CardContainer/CardContainer'
 import Counter from './Components/Counter/Counter'
 import ColorCardForm from './Components/ColorCardForm/ColorCardForm'
@@ -32,15 +32,23 @@ function App() {
     },
   ]
 
-  
+  const [colorCardLista, setColorCardLista] = useState(colorCards)
+  const handleSubmit = (e, formValues) => {
+    e.preventDefault()
+    const colors = []
+    for(let i = 1; i < 4; i = i + 1){
+      colors.push(formValues['color_' + i])
+    }
+    setColorCardLista([...colorCardLista, {colors: colors, likes: 0, id: 5, update: formValues.update}])
+  }
 
 
 
   return (
     <>
-      <CardContainer colorCards={colorCards} />
+      <CardContainer colorCards={colorCardLista} />
       <Counter limit={3}/>
-      <ColorCardForm/>
+      <ColorCardForm handleSubmit={handleSubmit}/>
     </>
   )
 }
