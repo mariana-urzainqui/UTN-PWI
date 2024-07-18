@@ -1,12 +1,21 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { obtenerProductoPorId } from '../../helpers/productos'
+import { useNavigate, useParams } from 'react-router-dom'
+import { obtenerProductoPorId, eliminarProductoPorId } from '../../helpers/productos'
+import { useGlobalContext } from '../../Context/GlobalContext'
 
 
 const Detail = () => {
-    const parametros = useParams()
+    const { producto_id } = useParams()
+    
+    const producto = obtenerProductoPorId(producto_id)
 
-    const {
+    if(!producto) {
+        return <div>Producto no encontrado</div>
+    }
+
+    const {handleEliminarProducto} = useGlobalContext()
+
+    const { 
         nombre,
         descripcion,
         precio,
@@ -14,7 +23,8 @@ const Detail = () => {
         stock,
         codigo,
         categoria
-    } = obtenerProductoPorId(parametros.producto_id)
+    } = producto
+
     return (
         <div>
             <h1>{nombre}</h1>
@@ -31,6 +41,7 @@ const Detail = () => {
             </span>
             <br/>
             <button>Comprar</button>
+            <button onClick={() => handleEliminarProducto(id)}>Eliminar</button>
         </div>
     )
 }

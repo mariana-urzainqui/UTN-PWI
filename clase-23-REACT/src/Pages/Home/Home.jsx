@@ -1,8 +1,9 @@
 import React from 'react'
 import { ProductList } from '../../Components'
-import { productos } from '../../data/productsData'
+import { useGlobalContext } from '../../Context/GlobalContext'
 
 const Home = () => {
+    const { productos } = useGlobalContext()
     return (
         <div>
             <h1>Elige nuestros productos</h1>
