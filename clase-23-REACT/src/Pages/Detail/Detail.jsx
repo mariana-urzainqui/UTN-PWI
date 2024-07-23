@@ -5,6 +5,8 @@ import { useGlobalContext } from '../../Context/GlobalContext'
 
 
 const Detail = () => {
+
+    const parametros = useParams()
     const { producto_id } = useParams()
     
     const producto = obtenerProductoPorId(producto_id)

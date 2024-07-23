@@ -89,4 +89,5 @@ export const productos = [
         codigo: "BIC-MONTANA",
         categoria: "Deporte"
     }
-];
+]
+
